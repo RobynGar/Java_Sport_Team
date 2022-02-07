@@ -21,7 +21,11 @@ public class Main {
         // OR
         System.out.println(teamService.countEmptySpacesOnTeam(scotland));
 
-        teamService.addPlayerToTeam(scotland, dave);
+        try {
+            teamService.addPlayerToTeam(scotland, dave);
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
         int spacesAfter = teamService.countEmptySpacesOnTeam(scotland);
         System.out.println(spacesAfter);
     }

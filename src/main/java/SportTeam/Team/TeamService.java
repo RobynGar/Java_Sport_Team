@@ -44,7 +44,9 @@ public class TeamService {
     }
     //addPlayerToTeam(Team, Player): void
     // (as do not want to return anything)
-    public void addPlayerToTeam(Team team, Player player){
+    // below says something in this method could throw an
+    // exception this let the compiler know this
+    public void addPlayerToTeam(Team team, Player player) throws Exception{
       //check if empty spaces on team
        int spaces = countEmptySpacesOnTeam(team);
        // if there is add player
@@ -60,6 +62,9 @@ public class TeamService {
                     break;
                 }
             }
+        } else {
+            // if it is not > 0 then throw an exception
+            throw new IllegalStateException("Team is full");
         }
     }
 
