@@ -23,7 +23,7 @@ public class Player {
         this.contractLength = contractLength;
     }
 
-    // encapsulation 
+    // encapsulation
     // getters and setters
     public String getName() {
         return name;

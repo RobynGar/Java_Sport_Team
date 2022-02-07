@@ -17,8 +17,15 @@ public class Team {
     }
 
     // constructor
-    public Team(Player[] players, String name, Manager manager) {
-        this.players = players;
+    // when creating a new team we do not already have players
+    // in that team we need to add players, so we do not pass
+    // Players[] in Team(). We do know that the player array
+    // will not exceed 15 players as that is the number that
+    // makes up a rugby team. So we can set the players array
+    // size to 15, which will be the same size for every new team we create
+
+    public Team(String name, Manager manager) {
+        this.players = new Player[15];
         this.name = name;
         this.manager = manager;
     }
@@ -26,7 +33,9 @@ public class Team {
     public Player[] getPlayers() {
         return players;
     }
-
+    // this refers to the property need this as we have passed
+    // manager as argument so this.players refers to the
+    // property players
     public void setPlayers(Player[] players) {
         this.players = players;
     }
