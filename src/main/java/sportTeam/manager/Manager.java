@@ -1,4 +1,4 @@
-package SportTeam.Manager;
+package sportTeam.manager;
 
 import java.util.Objects;
 

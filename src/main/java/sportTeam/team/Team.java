@@ -1,7 +1,7 @@
-package SportTeam.Team;
+package sportTeam.team;
 
-import SportTeam.Manager.Manager;
-import SportTeam.Player.Player;
+import sportTeam.manager.Manager;
+import sportTeam.player.Player;
 
 import java.util.Arrays;
 import java.util.Objects;

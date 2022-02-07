@@ -1,7 +1,7 @@
-import SportTeam.Manager.Manager;
-import SportTeam.Player.Player;
-import SportTeam.Team.Team;
-import SportTeam.Team.TeamService;
+import sportTeam.manager.Manager;
+import sportTeam.player.Player;
+import sportTeam.team.Team;
+import sportTeam.team.TeamService;
 
 public class Main {
 

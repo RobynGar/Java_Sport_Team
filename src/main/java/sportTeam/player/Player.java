@@ -1,4 +1,4 @@
-package SportTeam.Player;
+package sportTeam.player;
 
 import java.util.Objects;
 

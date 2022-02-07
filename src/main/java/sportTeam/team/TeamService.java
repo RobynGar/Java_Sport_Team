@@ -1,6 +1,6 @@
-package SportTeam.Team;
+package sportTeam.team;
 
-import SportTeam.Player.Player;
+import sportTeam.player.Player;
 
 public class TeamService {
 
