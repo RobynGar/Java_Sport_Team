@@ -3,9 +3,11 @@ package SportTeam.Player;
 import java.util.Objects;
 
 public class Player {
+    //properties
     private String name;
     private String position;
     private int number;
+    private int contractLength;
 
     //default constructor
     public Player() {
@@ -13,12 +15,16 @@ public class Player {
     }
 
     // constructor
-    public Player(String name, String position, int number) {
+    // each constructor needs to be unique signature
+    public Player(String name, String position, int number, int contractLength) {
         this.name = name;
         this.position = position;
         this.number = number;
+        this.contractLength = contractLength;
     }
 
+    // encapsulation 
+    // getters and setters
     public String getName() {
         return name;
     }
@@ -43,12 +49,21 @@ public class Player {
         this.number = number;
     }
 
+    public int getContractLength() {
+        return contractLength;
+    }
+
+    public void setContractLength(int contractLength) {
+        this.contractLength = contractLength;
+    }
+
     @Override
     public String toString() {
         return "Player{" +
                 "name='" + name + '\'' +
                 ", position='" + position + '\'' +
                 ", number=" + number +
+                ", contractLength=" + contractLength +
                 '}';
     }
 
@@ -57,11 +72,11 @@ public class Player {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Player player = (Player) o;
-        return number == player.number && Objects.equals(name, player.name) && Objects.equals(position, player.position);
+        return number == player.number && contractLength == player.contractLength && Objects.equals(name, player.name) && Objects.equals(position, player.position);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(name, position, number);
+        return Objects.hash(name, position, number, contractLength);
     }
 }
