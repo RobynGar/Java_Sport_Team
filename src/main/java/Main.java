@@ -1,10 +1,13 @@
 import SportTeam.Manager.Manager;
+import SportTeam.Player.Player;
 import SportTeam.Team.Team;
 import SportTeam.Team.TeamService;
 
 public class Main {
 
     public static void main(String[] args) {
+
+        Player dave = new Player("Dave", "side", 5, 3);
 
         Manager manager = new Manager("Gregor Townsend");
 
@@ -13,9 +16,13 @@ public class Main {
         // printing out the empty space on the team
         TeamService teamService = new TeamService();
 
-        int spaces = teamService.countEmptySpacesOnTeam(scotland);
-        System.out.println(spaces);
+        int spacesBefore = teamService.countEmptySpacesOnTeam(scotland);
+        System.out.println(spacesBefore);
         // OR
         System.out.println(teamService.countEmptySpacesOnTeam(scotland));
+
+        teamService.addPlayerToTeam(scotland, dave);
+        int spacesAfter = teamService.countEmptySpacesOnTeam(scotland);
+        System.out.println(spacesAfter);
     }
 }
